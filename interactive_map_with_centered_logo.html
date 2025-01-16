@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_d8906cb2b019422154e76b877319fbdc {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>
+    
+    
+<div style="position: fixed; 
+            top: 10px; left: 50%; transform: translateX(-50%); z-index: 1000; 
+            background-color: white; padding: 10px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.2);">
+    <img src="IFI_logo_optimized.png" style="width: 400px; height: auto;">
+</div>
+    
+            <div class="folium-map" id="map_d8906cb2b019422154e76b877319fbdc" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_d8906cb2b019422154e76b877319fbdc = L.map(
+                "map_d8906cb2b019422154e76b877319fbdc",
+                {
+                    center: [20.0, 0.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 2,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_9ad8d4107d046322f6bf9f8a8d52ffb7 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_d8906cb2b019422154e76b877319fbdc);
+        
+    
+            var feature_group_478d41895dd0be6b92fcb6f8de31b277 = L.featureGroup(
+                {}
+            ).addTo(map_d8906cb2b019422154e76b877319fbdc);
+        
+    
+            var marker_39dad8cd9bcac240ad51e6b13d6d1572 = L.marker(
+                [33.749, -84.388],
+                {}
+            ).addTo(feature_group_478d41895dd0be6b92fcb6f8de31b277);
+        
+    
+        var popup_b90c4de66e7ab2e946211d0413d980e2 = L.popup({"maxWidth": 300});
+
+        
+            var html_d5c1b5c71b14d318dc09f90c1bc6b508 = $(`<div id="html_d5c1b5c71b14d318dc09f90c1bc6b508" style="width: 100.0%; height: 100.0%;">         <b>Flight Attendant - Delta Airlines</b><br>         Location: Atlanta, USA<br>         <a href="https://delta.com/careers" target="_blank">Apply Here</a>         </div>`)[0];
+            popup_b90c4de66e7ab2e946211d0413d980e2.setContent(html_d5c1b5c71b14d318dc09f90c1bc6b508);
+        
+
+        marker_39dad8cd9bcac240ad51e6b13d6d1572.bindPopup(popup_b90c4de66e7ab2e946211d0413d980e2)
+        ;
+
+        
+    
+    
+            marker_39dad8cd9bcac240ad51e6b13d6d1572.bindTooltip(
+                `<div>
+                     Flight Attendant - Delta Airlines
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var feature_group_a6f0acedfc603df2dceac51c5dbaed1b = L.featureGroup(
+                {}
+            ).addTo(map_d8906cb2b019422154e76b877319fbdc);
+        
+    
+            var marker_cd5c3484f3fda1c5985dbb8e44dc88bc = L.marker(
+                [25.276, 55.296],
+                {}
+            ).addTo(feature_group_a6f0acedfc603df2dceac51c5dbaed1b);
+        
+    
+        var popup_0f9879d7c98db4b611b77d9d344485d5 = L.popup({"maxWidth": 300});
+
+        
+            var html_4f9f2231173de605f9cd4a2da1bd8b97 = $(`<div id="html_4f9f2231173de605f9cd4a2da1bd8b97" style="width: 100.0%; height: 100.0%;">         <b>Cabin Crew - Emirates</b><br>         Location: Dubai, UAE<br>         <a href="https://emiratesgroupcareers.com" target="_blank">Apply Here</a>         </div>`)[0];
+            popup_0f9879d7c98db4b611b77d9d344485d5.setContent(html_4f9f2231173de605f9cd4a2da1bd8b97);
+        
+
+        marker_cd5c3484f3fda1c5985dbb8e44dc88bc.bindPopup(popup_0f9879d7c98db4b611b77d9d344485d5)
+        ;
+
+        
+    
+    
+            marker_cd5c3484f3fda1c5985dbb8e44dc88bc.bindTooltip(
+                `<div>
+                     Cabin Crew - Emirates
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var feature_group_d7e294d3d29131a4a4886de29dd1240a = L.featureGroup(
+                {}
+            ).addTo(map_d8906cb2b019422154e76b877319fbdc);
+        
+    
+            var marker_c12cb305d4e3a9e9d8ab1549a5d93128 = L.marker(
+                [-33.868, 151.209],
+                {}
+            ).addTo(feature_group_d7e294d3d29131a4a4886de29dd1240a);
+        
+    
+        var popup_fcf46a384730fb7ca37e039d60eee126 = L.popup({"maxWidth": 300});
+
+        
+            var html_a3481fe07fdef4be3e0ee3e1cdbf65cc = $(`<div id="html_a3481fe07fdef4be3e0ee3e1cdbf65cc" style="width: 100.0%; height: 100.0%;">         <b>Flight Attendant - Qantas</b><br>         Location: Sydney, Australia<br>         <a href="https://qantas.com/careers" target="_blank">Apply Here</a>         </div>`)[0];
+            popup_fcf46a384730fb7ca37e039d60eee126.setContent(html_a3481fe07fdef4be3e0ee3e1cdbf65cc);
+        
+
+        marker_c12cb305d4e3a9e9d8ab1549a5d93128.bindPopup(popup_fcf46a384730fb7ca37e039d60eee126)
+        ;
+
+        
+    
+    
+            marker_c12cb305d4e3a9e9d8ab1549a5d93128.bindTooltip(
+                `<div>
+                     Flight Attendant - Qantas
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var feature_group_8ee3ecb7e03e8dca31c9f14717cceb68 = L.featureGroup(
+                {}
+            ).addTo(map_d8906cb2b019422154e76b877319fbdc);
+        
+    
+            var marker_2ed03939bcd74a7a53106186a363bab9 = L.marker(
+                [50.11, 8.682],
+                {}
+            ).addTo(feature_group_8ee3ecb7e03e8dca31c9f14717cceb68);
+        
+    
+        var popup_0e40df83969eed0311d05d2bd7711382 = L.popup({"maxWidth": 300});
+
+        
+            var html_cfc0ef9e2d1248ee87a6dc72b3555805 = $(`<div id="html_cfc0ef9e2d1248ee87a6dc72b3555805" style="width: 100.0%; height: 100.0%;">         <b>Cabin Crew - Lufthansa</b><br>         Location: Frankfurt, Germany<br>         <a href="https://lufthansa.com/careers" target="_blank">Apply Here</a>         </div>`)[0];
+            popup_0e40df83969eed0311d05d2bd7711382.setContent(html_cfc0ef9e2d1248ee87a6dc72b3555805);
+        
+
+        marker_2ed03939bcd74a7a53106186a363bab9.bindPopup(popup_0e40df83969eed0311d05d2bd7711382)
+        ;
+
+        
+    
+    
+            marker_2ed03939bcd74a7a53106186a363bab9.bindTooltip(
+                `<div>
+                     Cabin Crew - Lufthansa
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var layer_control_fdba9d76f66ca25e26b7bba72d23ae98 = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_9ad8d4107d046322f6bf9f8a8d52ffb7,
+                },
+                overlays :  {
+                    "North America" : feature_group_478d41895dd0be6b92fcb6f8de31b277,
+                    "Middle East" : feature_group_a6f0acedfc603df2dceac51c5dbaed1b,
+                    "Oceania" : feature_group_d7e294d3d29131a4a4886de29dd1240a,
+                    "Europe" : feature_group_8ee3ecb7e03e8dca31c9f14717cceb68,
+                },
+            };
+            L.control.layers(
+                layer_control_fdba9d76f66ca25e26b7bba72d23ae98.base_layers,
+                layer_control_fdba9d76f66ca25e26b7bba72d23ae98.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_d8906cb2b019422154e76b877319fbdc);
+        
+</script>
+</html>
