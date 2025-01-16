@@ -13,34 +13,35 @@
     <h1 style="text-align:center; font-family: Arial, sans-serif; color: #0D519F; margin-top: 20px; letter-spacing: 2px;">CABIN CREW TRAINING</h1>
     <div id="map" style="width: 100%; height: 80vh;"></div>
     <script>
-  // Initialize the map
-  var map = L.map('map').setView([20, 0], 2); // Center on the world view
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: 'Map data © OpenStreetMap contributors',
-      maxZoom: 18
-  }).addTo(map);
+        // Initialize the map
+        var map = L.map('map').setView([20, 0], 2); // Center on the world view
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: 'Map data © OpenStreetMap contributors',
+            maxZoom: 18
+        }).addTo(map);
 
-  // Fetch job postings from the Google Apps Script JSON URL
-  fetch("https://script.google.com/macros/s/AKfycbzyOjbY3E1LpWrkeX5hIbzi7LMvm32XYSopTVF_K4QoKRlQeg6jxifP58rMtQ9UqpZogA/exec") // Replace with your Web App URL
-      .then(response => response.json())
-      .then(data => {
-          data.forEach(job => {
-              // Use a default latitude/longitude if location data is missing
-              const latitude = job.LocationLat || 0;
-              const longitude = job.LocationLon || 0;
+        // Fetch job postings from the Google Apps Script JSON URL
+        fetch("https://script.google.com/macros/s/AKfycbzyOjbY3E1LpWrkeX5hIbzi7LMvm32XYSopTVF_K4QoKRlQeg6jxifP58rMtQ9UqpZogA/exec")
+            .then(response => response.json())
+            .then(data => {
+                data.forEach(job => {
+                    // Use a default latitude/longitude if location data is missing
+                    const latitude = job.LocationLat || 0;
+                    const longitude = job.LocationLon || 0;
 
-              // Add a marker to the map for each job
-              var marker = L.marker([latitude, longitude]).addTo(map);
-              marker.bindPopup(
-                  `<b>${job.Title}</b><br>
-                   Company: ${job.Company}<br>
-                   Location: ${job.Location}<br>
-                   <a href="${job.Link}" target="_blank">Apply Here</a>`
-              );
-          });
-      })
-      .catch(error => console.error('Error fetching job postings:', error));
-</script>
-
+                    // Only add markers with valid coordinates
+                    if (latitude !== 0 && longitude !== 0) {
+                        var marker = L.marker([latitude, longitude]).addTo(map);
+                        marker.bindPopup(
+                            `<b>${job.Title}</b><br>
+                            Company: ${job.Company}<br>
+                            Location: ${job.Location}<br>
+                            <a href="${job.Link}" target="_blank">Apply Here</a>`
+                        );
+                    }
+                });
+            })
+            .catch(error => console.error('Error fetching job postings:', error));
+    </script>
 </body>
 </html>
