@@ -21,7 +21,7 @@
   }).addTo(map);
 
   // Fetch job postings from the Google Apps Script JSON URL
-  fetch(https://script.google.com/macros/s/AKfycbzyOjbY3E1LpWrkeX5hIbzi7LMvm32XYSopTVF_K4QoKRlQeg6jxifP58rMtQ9UqpZogA/exec) // Replace with your Web App URL
+  fetch("https://script.google.com/macros/s/AKfycbzyOjbY3E1LpWrkeX5hIbzi7LMvm32XYSopTVF_K4QoKRlQeg6jxifP58rMtQ9UqpZogA/exec") // Replace with your Web App URL
       .then(response => response.json())
       .then(data => {
           data.forEach(job => {
